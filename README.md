@@ -2,7 +2,7 @@
 Guide for Web Scraping with Python + AWS Services. Build your own dataset!
 
 ## Intro
-This project will guide you on how to Web Scrape an e-commerce page and store the date into a managed SQL database service using Python and some AWS Services. (We are not dealing with Anti-Scraping tools)
+This project will guide you how to Web Scrape an e-commerce page and store the date into a managed SQL database service using Python and some AWS Services. (We are not dealing with Anti-Scraping tools)
 
 ## Goal
 Help data science enthusiasts with web scraping and AWS services, also encourage them building and sharing their own datasets.
