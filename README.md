@@ -25,5 +25,5 @@ A key step for web scrapping is mapping which data you need to get and identify 
 ## Creating a cloud DB Instance
 For storing our data, we're goint to use AWS RDS (Relational Database Service). All steps are descride in the "create_aws_db_rds.pdf".
 
-## Dealing with Sensitive data and editable configurations
-It's  not a good idea keeping into your python scripts sensitve data, such as users, passwords and endpoint address, especially if you will share ypur project somewhere. Some configuration into your file 
+## Dealing with sensitive data and editable configurations
+It's  not a good idea keeping into your python scripts sensitve data, such as users, passwords and endpoint address, especially if you will share your project somewhere. Also for some configurations into your script that may require constant updates a good idea is using "configparser" lib, with it you can use a ".ini" file to store values for your variables, here is a [short guide](https://zetcode.com/python/configparser/) t
