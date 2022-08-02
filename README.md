@@ -26,4 +26,18 @@ A key step for web scrapping is mapping which data you need to get and identify 
 For storing our data, we're goint to use AWS RDS (Relational Database Service). All steps are descride in the "create_aws_db_rds.pdf".
 
 ## Dealing with sensitive data and editable configurations
-It's  not a good idea keeping into your python scripts sensitve data, such as users, passwords and endpoint address, especially if you will share your project somewhere. Also for some configurations into your script that may require constant updates a good idea is using "configparser" lib, with it you can use a ".ini" file to store values for your variables, here is a [short guide](https://zetcode.com/python/configparser/) t
+It's  not a good idea keeping into your python scripts sensitve data, such as users, passwords and endpoint address, especially if you will share your project somewhere. Also for some configurations into your script that may require constant updates a good idea is using "configparser" lib, with it you can use a ".ini" file to store values for your variables, here is a [short guide](https://zetcode.com/python/configparser/) to use configparser lib.
+
+Our "config.ini" file, keeps two kind of data. First we configure it with the classes of web elements used for scraping (I notice that from time to time it changes in minor updates), and second sensitive data from our DB instance (user, password, host...).
+
+## Rewriting 
+
+## Building a docker image
+
+## Uploading container image do AWS
+
+## Deploying a Lambda Function
+
+## Scheduling Lambda Function 
+
+## AWS billing cautions
