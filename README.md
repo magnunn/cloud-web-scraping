@@ -36,14 +36,13 @@ It's  not a good idea keeping into your python scripts sensitve data, such as us
 Our "config.ini" file, keeps two kind of data. First we configure it with the classes of web elements used for scraping (I notice that from time to time it changes in minor updates), and second sensitive data from our DB instance (user, password, host...).
 
 
-## Rewriting
+## Rewriting the code
 If you are considering deploying this solution, it's necessary rewriting this code from a notebook's didactic structure to a a deployable code. In the "webscraping_webmotors.py" file we have a rewritten the code using most of python best practices, [here](https://data-flair.training/blogs/python-best-practices/) there are plenty of tips. 
 
-At the final part of this code, it was added "upload_aws" function, that is responsible for conecting and uploading data do AWS, and also a final session to help validating if the data was uploaded or not.
+At the final part of this code, it was added "upload_aws" function, that is responsible for conecting and uploading data to AWS, and also a final session to help validating if the data was uploaded or not.
 
 
-## Building a Docker image and uploading container image do AWS
-
+## Building a Docker image and uploading container image to AWS
 To make it possible running our code in a cloud environment, such as AWS's Lambda Functions, we shall some how replicate all python's dependencies from our project, Docker is a tool that enables users to publish and share container-based applications, and AWS ECR (Elastic Container Registry) is where we can upload this image to replicate on AWS services all our python environment.
 
 
