@@ -30,7 +30,8 @@ It's  not a good idea keeping into your python scripts sensitve data, such as us
 
 Our "config.ini" file, keeps two kind of data. First we configure it with the classes of web elements used for scraping (I notice that from time to time it changes in minor updates), and second sensitive data from our DB instance (user, password, host...).
 
-## Rewriting 
+## Rewriting
+If you are considering deploying this solution, it's necessary rewriting this code from a notebook's didactic structure to a a deployable code. In the "webscraping_webmotors.py" file we have a rewritten the code using most of python best practices, [here](https://data-flair.training/blogs/python-best-practices/) there are plenty of tips
 
 ## Building a docker image
 
