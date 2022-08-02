@@ -24,11 +24,11 @@ This is the first fase of this project, we will manage to extract data from a Br
 
 Firstly I recommend creating a new Python virtual enviroment before start coding, in the future steps to deploy your solution on a cloud service you'll want to upload only the required libs. You can take a look [here](https://learnpython.com/blog/change-python-versions/) to learn how to do that.
 
-A key step for web scrapping is mapping which data you need to get and identify how they're loaded on the page's HTML. If you have no ideia on how doing that, check [this article](https://blog.hubspot.com/website/how-to-inspect#:~:text=Right%2Dclicking%20a%20specific%20page,choose%20More%20Tools%20%3E%20Developer%20Tools.). To help you undertanding the HTML's elements used an as it can change over time as the web page developer's can update the site, in the "Page elements ref.pdf" file I show how 
+A key step for web scrapping is mapping which data you need to get and identify how they're loaded on the page's HTML. If you have no ideia on how doing that, check [this article](https://blog.hubspot.com/website/how-to-inspect#:~:text=Right%2Dclicking%20a%20specific%20page,choose%20More%20Tools%20%3E%20Developer%20Tools.). To help you undertanding the HTML's elements used an as it can change over time as the web page developer's can update the site, in the "[html_elements_ref.pdf](https://github.com/magnunn/cloud-web-scraping/blob/main_english/instructions/html_elements_ref.pdf)" file I show how 
 
 
 ## Creating a cloud DB Instance
-For storing our data, we're going to use AWS RDS (Relational Database Service). All steps are descride in the "create_aws_db_rds.pdf".
+For storing our data, we're going to use AWS RDS (Relational Database Service). All steps are descride in the "[create_aws_db_rds.pdf](https://github.com/magnunn/cloud-web-scraping/blob/main_english/instructions/create_aws_db_rds.pdf)" file.
 
 ## Dealing with sensitive data and editable configurations
 It's  not a good idea keeping into your python scripts sensitve data, such as users, passwords and endpoint address, especially if you will share your project somewhere. Also for some configurations into your script that may require constant updates a good idea is using "configparser" lib, with it you can use a ".ini" file to store values for your variables, here is a [short guide](https://zetcode.com/python/configparser/) to use configparser lib.
@@ -45,9 +45,11 @@ At the final part of this code, it was added "upload_aws" function, that is resp
 ## Building a Docker image and uploading to AWS
 To make it possible running our code in a cloud environment, such as AWS's Lambda Functions, we shall some how replicate all python's dependencies from our project, Docker is a tool that enables users to publish and share container-based applications, and AWS ECR (Elastic Container Registry) is where we can upload this image to replicate on AWS services all our python environment.
 
+All steps from buildind a image to pushing it to AWS can be followed in "[dealing_with_container_image.pdf](https://github.com/magnunn/cloud-web-scraping/blob/main_english/instructions/dealing_with_container_image.pdf)" file. 
 
-## Deploying and Scheduling Lambda Function
 
+## Deploying and scheduling Lambda Function
+Finally, the most expected moment, deploying it in a roduction environment. We are going to use AWS Lambda service, once it is quite easy to implement and can handle a relatively simple script like this (Lambdas biggest limitations is having a maximum timeout of 15 minutes). And probabily it's also desired to schedule this function to run from times to times, this schedule will be made with AWS EventBridge. All steps are listed in "[creating_scheuling_lambda_function.pdf](https://github.com/magnunn/cloud-web-scraping/blob/main_english/instructions/creating_scheuling_lambda_function.pdf)" file.
 
 
 ## AWS billing cautions
