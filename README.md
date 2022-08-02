@@ -23,7 +23,7 @@ Firstly I recommend creating a new Python virtual enviroment before start coding
 A key step for web scrapping is mapping which data you need to get and identify how they're loaded on the page's HTML. If you have no ideia on how doing that, check [this article](https://blog.hubspot.com/website/how-to-inspect#:~:text=Right%2Dclicking%20a%20specific%20page,choose%20More%20Tools%20%3E%20Developer%20Tools.). To help you undertanding the HTML's elements used an as it can change over time as the web page developer's can update the site, in the "Page elements ref.pdf" file I show how 
 
 ## Creating a cloud DB Instance
-For storing our data, we're goint to use AWS RDS (Relational Database Service). All steps are descride in the "create_aws_db_rds.pdf".
+For storing our data, we're going to use AWS RDS (Relational Database Service). All steps are descride in the "create_aws_db_rds.pdf".
 
 ## Dealing with sensitive data and editable configurations
 It's  not a good idea keeping into your python scripts sensitve data, such as users, passwords and endpoint address, especially if you will share your project somewhere. Also for some configurations into your script that may require constant updates a good idea is using "configparser" lib, with it you can use a ".ini" file to store values for your variables, here is a [short guide](https://zetcode.com/python/configparser/) to use configparser lib.
